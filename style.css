@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars */
+    background-color: #000;
+}
+
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Sits in the background */
+}
+
+.tracker-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10; /* Layers on top of the 3D scene */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #111;
+}
+
+.output_canvas {
+    display: block;
+    transform: scaleX(-1); /* Mirrors the webcam feed naturally */
+}
